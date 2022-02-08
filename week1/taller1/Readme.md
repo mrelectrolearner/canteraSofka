@@ -1,6 +1,6 @@
 # Homework 1
 This is the homework 1 assigned in the first week of the Sofka U program *cantera 2*.
-In this I developed 6 class in the programming lenguaje java:
+In this I developed 6 class in the programming lenguage java:
 - Fruit: a representation of a fruit.
 - Bank: a representation of a bank
 - BankAccount: a representation of a bank account.
