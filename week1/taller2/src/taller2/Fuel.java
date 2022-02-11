@@ -37,7 +37,7 @@ public class Fuel {
     }
 
     /**
-     *Update the fuel state when it is consumed by the spacecraft.
+     *Update the fuel stateOn when it is consumed by the spacecraft.
      * @param wasteVolume The fuel's volume being consumed.
      */
     public void fuelWaste(double wasteVolume){
@@ -49,7 +49,7 @@ public class Fuel {
     }
 
     /**
-     * Update the fuel state when it is refuel.
+     * Update the fuel stateOn when it is refuel.
      * @param volumeToRefuel The fuel volume that is supply.
      * @param tankCapacity The tank capacity of the spacecraft.
      */
