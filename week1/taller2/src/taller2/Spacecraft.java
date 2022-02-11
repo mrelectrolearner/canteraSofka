@@ -71,7 +71,9 @@ public abstract class Spacecraft {
      */
     protected void speedUp(double[] acceleration) {
         double timeInterval=0.001;
+
         for(int index=0;index<this.speed.length;index++){
+            fuelConsumed(acceleration[index]*this.getMass());
             this.speed[index]= this.speed[index] + (timeInterval  * acceleration[index]);
         }
     }
@@ -95,7 +97,7 @@ public abstract class Spacecraft {
      * Fuel consumption.
      * @param power the power use for the spacecraft.
      */
-    public void fuelConsumed(double power){
+    private void fuelConsumed(double power){
         double fuelConsumed=this.powerToFuel(power);
         this.fuel.setVolume(this.fuel.getVolume()-fuelConsumed);
     }
@@ -105,7 +107,7 @@ public abstract class Spacecraft {
      */
     public void land(){
         boolean land=Arrays.equals(this.position, new double[]{0, 0, 0});
-        double minDistance=0.001;
+        double minDistance=1;
         double minPowerConsumed=this.distanceToPower(minDistance);
         while(!land){
             for (int index = 0; index <this.position.length; index++){

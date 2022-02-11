@@ -29,16 +29,17 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      */
     @Override
     public void propulsionPower(double[] power) {
-        double[] acceleration = new double[0];
-        double[] distance=new double[0];
+        double[] acceleration = new double[3];
+
         for(int index=0;index<power.length;index++){
             acceleration[index]=power[index]/this.calculateDistance();
-            distance[index]=acceleration[index]/10;
         }
-
         this.speedUp(acceleration);
-        this.move(distance);
-
+    }
+    @Override
+    protected void move(double[] distance) {
+        super.move(distance);
+        propulsionPower(distance);
     }
 
 

@@ -54,18 +54,23 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public void propulsionPower(double[] power) {
-        double[] acceleration = new double[0];
-        double[] distance=new double[0];
+        double[] acceleration = new double[3];
+
         for(int index=0;index<power.length;index++){
-            acceleration[index]=power[index]/(this.getMass());
-            distance[index]=acceleration[index]*0.001+this.getSpeed()[index]*0.01;
+            acceleration[index]=1+power[index]/(this.getMass());
+
         }
 
         this.speedUp(acceleration);
-        this.move(distance);
+
 
     }
 
+    @Override
+    protected void move(double[] distance) {
+        super.move(distance);
+        propulsionPower(distance);
+    }
 
 
     /**
