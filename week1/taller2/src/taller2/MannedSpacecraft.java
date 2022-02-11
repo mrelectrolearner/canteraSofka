@@ -15,9 +15,9 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      * @param crewCapacity maximum number of people in the crew.
      */
     public MannedSpacecraft(
-            double power, String name, String typeOfPropulsionSystem, Fuel fuel, int crewCapacity)
+            double power, String name, String typeOfPropulsionSystem, Fuel fuel, int crewCapacity,double mass)
     {
-        super(power, name, typeOfPropulsionSystem, fuel);
+        super(power, name, typeOfPropulsionSystem, fuel, mass);
         this.crewCapacity = crewCapacity;
     }
 
@@ -29,16 +29,19 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      */
     @Override
     public void propulsionPower(double[] power) {
+        double[] acceleration = new double[0];
+        double[] distance=new double[0];
+        for(int index=0;index<power.length;index++){
+            acceleration[index]=power[index]/this.calculateDistance();
+            distance[index]=acceleration[index]/10;
+        }
+
+        this.speedUp(acceleration);
+        this.move(distance);
 
     }
 
-    /**
-     * Check if the propulsion system is able to work.
-     */
-    @Override
-    public boolean checkPropulsionSystem() {
-        return false;
-    }
+
 
     /**
      * Calculates the power value for a distance movement.
@@ -48,7 +51,8 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      */
     @Override
     public double distanceToPower(double distance) {
-        return 0;
+
+        return distance*5;
     }
 
     /**
@@ -59,6 +63,6 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      */
     @Override
     public double powerToFuel(double power) {
-        return 0;
+        return power/10;
     }
 }

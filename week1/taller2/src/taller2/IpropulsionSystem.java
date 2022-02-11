@@ -11,10 +11,6 @@ public interface IpropulsionSystem {
      */
     void propulsionPower(double[] power);
 
-    /**
-     * Check if the propulsion system is able to work.
-     */
-    boolean checkPropulsionSystem();
 
 
 }

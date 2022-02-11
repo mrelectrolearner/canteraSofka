@@ -37,6 +37,10 @@ public abstract class Spacecraft {
      * Represent the spacecraft's fuel.
      */
     private Fuel fuel ;
+    /**
+     * Represent the spacecraft's mass.
+     */
+    private double mass;
 
     /**
      * Instance a spacecraft turn off and with a position in {0,0,0} and speed {0,0,0}.
@@ -44,8 +48,12 @@ public abstract class Spacecraft {
      * @param name spacecraft's name.
      * @param typeOfPropulsionSystem  spacecraft's type of propulsion system.
      * @param fuel  spacecraft's fuel.
+     * @param mass
      */
-    public Spacecraft( double power, String name, String typeOfPropulsionSystem, Fuel fuel) {
+    public Spacecraft(
+            double power, String name, String typeOfPropulsionSystem, Fuel fuel, double mass)
+    {
+        this.mass = mass;
         this.speed = new double[]{0,0,0};
         this.power = power;
         this.name = name;
@@ -61,7 +69,7 @@ public abstract class Spacecraft {
      *
      * @param acceleration the acceleration thar is used to speed up the spacecraft.
      */
-    public void speedUp(double[] acceleration) {
+    protected void speedUp(double[] acceleration) {
         double timeInterval=0.001;
         for(int index=0;index<this.speed.length;index++){
             this.speed[index]= this.speed[index] + (timeInterval  * acceleration[index]);
@@ -117,7 +125,7 @@ public abstract class Spacecraft {
      * Move the spacecraft a distance.
      * @param distance the vector distance that is moved the spacecraft.
      */
-    public void move(double [] distance){
+    protected void move(double [] distance){
         double powerConsumed;
         for (int index = 0; index <this.position.length; index++){
             powerConsumed=this.distanceToPower(distance[index]);
@@ -125,6 +133,27 @@ public abstract class Spacecraft {
             this.position[index]+=distance[index];
         }
 
+    }
+
+    /**
+     * Calculate the distance between the spacecraft and the site of the launch
+     * use as reference inertial system.
+     * @return the distance between the spacecraft and the site of the launch
+     */
+    public double calculateDistance(){
+        double distance=0;
+        for(int index=0;index<this.position.length;index++){
+            distance+=Math.pow(this.position[index],2);
+        }
+        return Math.sqrt(distance);
+    }
+
+    public double getMass() {
+        return mass;
+    }
+
+    public void setMass(double mass) {
+        this.mass = mass;
     }
 
     public double[] getSpeed() {

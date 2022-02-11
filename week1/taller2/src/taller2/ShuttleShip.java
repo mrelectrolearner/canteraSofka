@@ -22,9 +22,9 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
             String name,
             String typeOfPropulsionSystem,
             Fuel fuel,
-            double loadCarryingCapacity)
+            double loadCarryingCapacity,double mass)
     {
-        super(power, name, typeOfPropulsionSystem, fuel);
+        super(power, name, typeOfPropulsionSystem, fuel, mass);
         this.loadCarryingCapacity = loadCarryingCapacity;
     }
 
@@ -54,16 +54,19 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public void propulsionPower(double[] power) {
+        double[] acceleration = new double[0];
+        double[] distance=new double[0];
+        for(int index=0;index<power.length;index++){
+            acceleration[index]=power[index]/(this.getMass());
+            distance[index]=acceleration[index]*0.001+this.getSpeed()[index]*0.01;
+        }
+
+        this.speedUp(acceleration);
+        this.move(distance);
 
     }
 
-    /**
-     * Check if the propulsion system is able to work.
-     */
-    @Override
-    public boolean checkPropulsionSystem() {
-        return false;
-    }
+
 
     /**
      * Calculates the power value for a distance movement.
@@ -73,7 +76,11 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public double distanceToPower(double distance) {
-        return 0;
+        double height=this.getPosition()[1];
+        double gravity=9.8;
+        double factor=1.5;
+        double mass=this.getMass()*factor;
+        return distance*gravity*mass*height;
     }
 
     /**
@@ -84,6 +91,6 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public double powerToFuel(double power) {
-        return 0;
+        return power*(this.calculateDistance())/10000;
     }
 }

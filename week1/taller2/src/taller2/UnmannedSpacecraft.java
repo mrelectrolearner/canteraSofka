@@ -1,19 +1,19 @@
 package taller2;
 
-public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem{
+public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem {
 
 
     /**
      * Instance a spacecraft turn off and with a position in {0,0,0} and speed {0,0,0}.
-     *  @param power                  spacecraft's power.
+     *
+     * @param power                  spacecraft's power.
      * @param name                   spacecraft's name.
      * @param typeOfPropulsionSystem spacecraft's type of propulsion system.
      * @param fuel                   spacecraft's fuel.
      */
     public UnmannedSpacecraft(
-            double power, String name, String typeOfPropulsionSystem, Fuel fuel)
-    {
-        super(power, name, typeOfPropulsionSystem, fuel);
+            double power, String name, String typeOfPropulsionSystem, Fuel fuel, double mass) {
+        super(power, name, typeOfPropulsionSystem, fuel, mass);
 
     }
 
@@ -25,7 +25,8 @@ public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public double distanceToPower(double distance) {
-        return 0;
+        double powerAux = Math.abs(this.calculateDistance() - distance) * 5;
+        return powerAux;
     }
 
     /**
@@ -36,7 +37,7 @@ public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public double powerToFuel(double power) {
-        return 0;
+        return Math.abs(this.getPower() - power) * 5;
     }
 
 
@@ -47,14 +48,15 @@ public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem{
      */
     @Override
     public void propulsionPower(double[] power) {
+        double[] acceleration = new double[0];
+        double[] distance=new double[0];
+        for(int index=0;index<power.length;index++){
+            acceleration[index]=power[index]*0.001;
+            distance[index]=acceleration[index]*0.001;
+        }
 
+        this.speedUp(acceleration);
+        this.move(distance);
     }
 
-    /**
-     * Check if the propulsion system is able to work.
-     */
-    @Override
-    public boolean checkPropulsionSystem() {
-        return false;
-    }
 }
