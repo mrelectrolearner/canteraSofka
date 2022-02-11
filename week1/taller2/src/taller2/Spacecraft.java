@@ -56,15 +56,23 @@ public abstract class Spacecraft {
 
     /**
      * Speed up the spacecraft with an acceleration.
+     *
      * @param acceleration the acceleration thar is used to speed up the spacecraft.
      */
-    public abstract void speedUp(double[] acceleration);
+    public void speedUp(double[] acceleration) {
 
+    }
+
+    /**
+     * Calculates the power value for a distance movement.
+     * @param distance Distance moved.
+     * @return Power consumed.
+     */
     public abstract double distanceToPower(double distance);
 
 
     /**
-     * Calculates the fuel consumption for a power
+     * Calculates the fuel consumption for a power value.
      * @param power the power use for the spacecraft.
      * @return the fuel consumed.
      */
