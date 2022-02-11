@@ -44,7 +44,7 @@ public abstract class Spacecraft {
      * @param typeOfPropulsionSystem  spacecraft's type of propulsion system.
      * @param fuel  spacecraft's fuel.
      */
-    public Spacecraft(float speed, float power, String name, String typeOfPropulsionSystem, Fuel fuel) {
+    public Spacecraft(float[] speed, float power, String name, String typeOfPropulsionSystem, Fuel fuel) {
         this.speed = speed;
         this.power = power;
         this.name = name;
