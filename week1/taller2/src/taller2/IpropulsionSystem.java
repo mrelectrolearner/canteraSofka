@@ -1,26 +1,20 @@
 package taller2;
 
 /**
- * Represent the propulsion System interface
+ * Represent the propulsion System interface and its basic actions.
  * @author Luis Felipe Rivas
  */
 public interface IpropulsionSystem {
     /**
-     * Activate the propulsion system from lef to right.
+     * Activate the propulsion system .
      * @param power the power of the propulsion.
      */
-    void propulsionPowerX(float power);
+    void propulsionPower(double[] power);
 
     /**
-     * Activate the propulsion system from down to up.
-     * @param power the power of the propulsion.
+     * Check if the propulsion system is able to work.
      */
-    void propulsionPowerY(float power);
+    boolean checkPropulsionSystem();
 
-    /**
-     * Activate the propulsion system back to forward.
-     * @param power the power of the propulsion.
-     */
-    void propulsionPowerZ(float power);
 
 }
