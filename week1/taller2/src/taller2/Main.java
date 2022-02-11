@@ -1,23 +1,47 @@
 package taller2;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Is the interface with the user and its operations.
+ */
 public class Main {
    public static void main(String[] args) {
+       /**
+        * Represent the spacecraft created by the user.
+        */
        Spacecraft selectSpacecraft = null;
+       /**
+        * Represent if the user want to create other spacecraft.
+        */
        boolean createOtherSpacecraft;
+       /**
+        * Represent the left to right movement of the spacecraft.
+        */
        double leftToRight;
+       /**
+        * Represent the down to up movement of the spacecraft.
+        */
        double downToUp;
+       /**
+        * Represent the back to forward movement of the spacecraft.
+        */
        double backToForward;
+
+       /**
+        * Represent the keyboard scan.
+        */
        Scanner scanner =new Scanner(System.in);
        while(true) {
+           /**
+            * The user select the spacecraft that want to create.
+            */
            System.out.println("Welcome, please select what spacecraft you want to create\n");
            System.out.println("1. Shuttle ship:Saturn V \n" +
-                   "2. Manned spacecraft: \n" +
-                   "3. unmanned spacecraft\n" +
-                   "4. Space station.\n " +
+                   "2. Manned spacecraft: Salyut \n" +
+                   "3. unmanned spacecraft: Mariner X\n" +
+                   "4. Manned spacecraft: Space station.\n " +
                    "Select one number: ");
 
            int select = scanner.nextInt();
@@ -76,13 +100,20 @@ public class Main {
                    System.out.println("invalid election, try again");
            }
 
-           System.out.print("nombre: " + selectSpacecraft.getName() + "\n" +
+           /**
+            * Show to the user, the spacecraft created.
+            */
+           System.out.print("name: " + selectSpacecraft.getName() + "\n" +
                    "power: " + selectSpacecraft.getPower() + "\n" +
                    "type of propulsion system" + selectSpacecraft.getTypeOfPropulsionSystem() + "\n" +
                    "mass: " + selectSpacecraft.getMass() + "\n" +
                    "position: (" + Arrays.toString(selectSpacecraft.getPosition()) + "\n" +
                    "speed: " + Arrays.toString(selectSpacecraft.getSpeed()) + "\n" +
                    "fuel volume:" + selectSpacecraft.getFuel().getVolume() + "\n");
+
+           /**
+            * Allow the user select the behavior  of the spacecraft.
+            */
            createOtherSpacecraft = false;
            while (!createOtherSpacecraft) {
                System.out.println("please select what your spacecraft will do\n");
@@ -118,8 +149,8 @@ public class Main {
                        System.out.println("invalid election, try again");
 
                }
-               if (selectBehavior <5||selectBehavior>0) {
-                   System.out.print("nombre: " + selectSpacecraft.getName() + "\n" +
+               if (selectBehavior <5 && selectBehavior>0) {
+                   System.out.print("name: " + selectSpacecraft.getName() + "\n" +
                            "power: " + selectSpacecraft.getPower() + "\n" +
                            "type of propulsion system" + selectSpacecraft.getTypeOfPropulsionSystem() + "\n" +
                            "mass: " + selectSpacecraft.getMass() + "\n" +

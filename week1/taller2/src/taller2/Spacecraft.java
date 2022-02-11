@@ -29,10 +29,7 @@ public abstract class Spacecraft {
      * Represent the spacecraft's type of propulsion system.
      */
     private String typeOfPropulsionSystem;
-    /**
-     * Represent if the spacecraft is on.
-     */
-    public boolean stateOn;
+
     /**
      * Represent the spacecraft's fuel.
      */
@@ -48,7 +45,7 @@ public abstract class Spacecraft {
      * @param name spacecraft's name.
      * @param typeOfPropulsionSystem  spacecraft's type of propulsion system.
      * @param fuel  spacecraft's fuel.
-     * @param mass
+     * @param mass spacecraft's mass.
      */
     public Spacecraft(
             double power, String name, String typeOfPropulsionSystem, Fuel fuel, double mass)
@@ -60,8 +57,31 @@ public abstract class Spacecraft {
         this.fuel = fuel;
         this.position = new double[]{0, 0, 0};
         this.typeOfPropulsionSystem = typeOfPropulsionSystem;
-        this.stateOn =false;
 
+    }
+    /**
+     * Calculates the power value for a distance movement.
+     * @param distance Distance moved.
+     * @return Power consumed.
+     */
+    public abstract double distanceToPower(double distance);
+
+
+    /**
+     * Calculates the fuel consumption for a power value.
+     * @param power the power use for the spacecraft.
+     * @return the fuel consumed.
+     */
+    public abstract double powerToFuel(double power);
+
+
+    /**
+     * Fuel consumption.
+     * @param power the power use for the spacecraft.
+     */
+    private void fuelConsumed(double power){
+        double fuelConsumed=Math.abs(this.powerToFuel(power));
+        this.fuel.setVolume(this.fuel.getVolume()-fuelConsumed);
     }
 
     /**
@@ -79,35 +99,11 @@ public abstract class Spacecraft {
     }
 
     /**
-     * Calculates the power value for a distance movement.
-     * @param distance Distance moved.
-     * @return Power consumed.
-     */
-    public abstract double distanceToPower(double distance);
-
-
-    /**
-     * Calculates the fuel consumption for a power value.
-     * @param power the power use for the spacecraft.
-     * @return the fuel consumed.
-     */
-    public abstract double powerToFuel(double power);
-
-    /**
-     * Fuel consumption.
-     * @param power the power use for the spacecraft.
-     */
-    private void fuelConsumed(double power){
-        double fuelConsumed=Math.abs(this.powerToFuel(power));
-        this.fuel.setVolume(this.fuel.getVolume()-fuelConsumed);
-    }
-
-    /**
      * Land the spacecraft.
      */
     public void land(){
         boolean land=Arrays.equals(this.position, new double[]{0, 0, 0});
-        double minDistance=1;
+        double minDistance=1; //With lower values a better resolution, but  my poor computer explodes.
         double minPowerConsumed=this.distanceToPower(minDistance);
         while(!land){
             for (int index = 0; index <this.position.length; index++){
@@ -150,65 +146,118 @@ public abstract class Spacecraft {
         return Math.sqrt(distance);
     }
 
+    /**
+     * Get the mass.
+     * @return spacecraft's mass.
+     */
     public double getMass() {
         return mass;
     }
+
+    /**
+     * Set the mass.
+     * @param mass spacecraft's mass to set.
+     */
 
     public void setMass(double mass) {
         this.mass = mass;
     }
 
+    /**
+     * Get the spacecraft's speed vector.
+     * @return speed vector.
+     */
     public double[] getSpeed() {
         return speed;
     }
 
+    /**
+     * Set spacecraft's speed vector.
+     * @param speed spacecraft's speed vector to set.
+     */
     public void setSpeed(double[] speed) {
         this.speed = speed;
     }
 
+    /**
+     * Get the spacecraft's power.
+     * @return spacecraft's power.
+     */
     public double getPower() {
         return power;
     }
 
+    /**
+     * Set the spacecraft's power.
+     * @param power spacecraft's power to set.
+     */
     public void setPower(double power) {
         this.power = power;
     }
 
+    /**
+     * Get spacecraft's name.
+     * @return spacecraft's name.
+     */
     public String getName() {
         return name;
     }
+
+    /**
+     * Set spacecraft's name.
+     * @param name spacecraft's name to set.
+     *
+     */
 
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Get spacecraft's position vector.
+     * @return  spacecraft's position vector.
+     */
     public double[] getPosition() {
         return position;
     }
 
+    /**
+     * Set the  spacecraft's position vector.
+     * @param position  spacecraft's position vector to set.
+     */
     public void setPosition(double[] position) {
         this.position = position;
     }
 
+    /**
+     * Get the type of propulsion system used by the spacecraft.
+     * @return type of propulsion system used by the spacecraft.
+     */
     public String getTypeOfPropulsionSystem() {
         return typeOfPropulsionSystem;
     }
 
+    /**
+     * Set type of propulsion system used by the spacecraft.
+     * @param typeOfPropulsionSystem type of propulsion system used by the spacecraft to set.
+     */
     public void setTypeOfPropulsionSystem(String typeOfPropulsionSystem) {
         this.typeOfPropulsionSystem = typeOfPropulsionSystem;
     }
 
-    public boolean isStateOn() {
-        return stateOn;
-    }
-
-    public void setStateOn(boolean stateOn) {
-        this.stateOn = stateOn;
-    }
+    /**
+     * Get the spacecraft's fuel.
+     * @return spacecraft's fuel.
+     */
 
     public Fuel getFuel() {
         return fuel;
     }
+
+    /**
+     * Set spacecraft's fuel.
+     * @param fuel spacecraft's fuel to set.
+     */
 
     public void setFuel(Fuel fuel) {
         this.fuel = fuel;

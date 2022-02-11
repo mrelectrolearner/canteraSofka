@@ -36,13 +36,16 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
         }
         this.speedUp(acceleration);
     }
+
+    /**
+     * Move the spacecraft a distance.
+     * @param distance the vector distance that is moved the spacecraft.
+     */
     @Override
     protected void move(double[] distance) {
         super.move(distance);
         propulsionPower(distance);
     }
-
-
 
     /**
      * Calculates the power value for a distance movement.

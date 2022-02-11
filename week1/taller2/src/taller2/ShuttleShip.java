@@ -49,6 +49,10 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
 
     }
 
+    /**
+     * Move the spacecraft.
+     * @param distance the vector distance that is moved the spacecraft.
+     */
     @Override
     protected void move(double[] distance) {
         super.move(distance);

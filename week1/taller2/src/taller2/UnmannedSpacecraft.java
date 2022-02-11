@@ -57,6 +57,11 @@ public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem 
         this.speedUp(acceleration);
 
     }
+
+    /**
+     * Move the spacecraft.
+     * @param distance the vector distance that is moved the spacecraft.
+     */
     @Override
     protected void move(double[] distance) {
         super.move(distance);
