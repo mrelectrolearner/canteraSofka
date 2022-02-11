@@ -1,7 +1,7 @@
 package taller2;
 
 /**
- *Represent a spacecraft's fuel
+ *Represent a spacecraft's fuel and its basic operations.
  * @author Luis Felipe Rivas Mina
  */
 public class Fuel {
@@ -12,15 +12,15 @@ public class Fuel {
     /**
      * Represent the fuel's autonomy
      */
-    private float autonomy;
+    private double autonomy;
     /**
      * Represent the fuel's mass
      */
-    private float mass;
+    private double mass;
     /**
      * Represent the fuel's volume
      */
-    private float volume;
+    private double volume;
 
     /**
      * Instance a spacecraft's fuel
@@ -29,7 +29,7 @@ public class Fuel {
      * @param mass fuel's mass
      * @param volume fuel's volume
      */
-    public Fuel(String name, float autonomy, float mass, float volume) {
+    public Fuel(String name, double autonomy, double mass, double volume) {
         this.name = name;
         this.autonomy = autonomy;
         this.mass = mass;
@@ -40,7 +40,7 @@ public class Fuel {
      *Update the fuel state when it is consumed by the spacecraft.
      * @param wasteVolume The fuel's volume being consumed.
      */
-    public void fuelWaste(float wasteVolume){
+    public void fuelWaste(double wasteVolume){
         if(this.volume > wasteVolume) {
             this.volume -= wasteVolume;
         }else {
@@ -53,8 +53,8 @@ public class Fuel {
      * @param volumeToRefuel The fuel volume that is supply.
      * @param tankCapacity The tank capacity of the spacecraft.
      */
-    public void refuel(float volumeToRefuel,float tankCapacity){
-        float totalRefuel=this.volume +volumeToRefuel;
+    public void refuel(double volumeToRefuel, double tankCapacity){
+        double totalRefuel=this.volume +volumeToRefuel;
         if(totalRefuel<tankCapacity){
             this.volume =this.volume +volumeToRefuel;
         }else{
@@ -82,7 +82,7 @@ public class Fuel {
      * Get the fuel autonomy.
      * @return the fuel autonomy.
      */
-    public float getAutonomy() {
+    public double getAutonomy() {
         return autonomy;
     }
 
@@ -98,7 +98,7 @@ public class Fuel {
      * Get the fuel mass.
      * @return the fuel mass.
      */
-    public float getMass() {
+    public double getMass() {
         return mass;
     }
 
@@ -114,7 +114,7 @@ public class Fuel {
      * Get the fuel's volume.
      * @return fuel's volume.
      */
-    public float getVolume() {
+    public double getVolume() {
         return volume;
     }
 
@@ -122,7 +122,7 @@ public class Fuel {
      * Set the fuel's volume.
      * @param volume fuel's volume.
      */
-    public void setVolume(float volume) {
+    public void setVolume(double volume) {
         this.volume = volume;
     }
 }
