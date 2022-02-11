@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Is the interface with the user and its operations.
+ * Is the interface for the user and its operations.
  */
 public class Main {
    public static void main(String[] args) {
