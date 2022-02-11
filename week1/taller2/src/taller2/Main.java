@@ -87,10 +87,9 @@ public class Main {
            while (!createOtherSpacecraft) {
                System.out.println("please select what your spacecraft will do\n");
                System.out.println("1. Land. \n" +
-                       "2. refuel. \n" +
-                       "3. Move \n" +
-                       "4. speedup.\n " +
-                       "5. Create other spacecraft\n" +
+                       "2. Move \n" +
+                       "3. speedup.\n " +
+                       "4. Create other spacecraft\n" +
                        "Select one number: ");
                int selectBehavior = scanner.nextInt();
                switch (selectBehavior) {
@@ -98,23 +97,20 @@ public class Main {
                        selectSpacecraft.land();
                        break;
                    case 2:
-                       selectSpacecraft.getFuel().refuel(10000, 1000000);
-                       break;
-                   case 3:
                        System.out.println("enter the distance vector separated by an enter");
                        leftToRight = scanner.nextDouble();
                        downToUp = scanner.nextDouble();
                        backToForward= scanner.nextDouble();
                        selectSpacecraft.move(new double[]{leftToRight, downToUp, backToForward});
                        break;
-                   case 4:
+                   case 3:
                        System.out.println("enter the velocity vector separated by an enter");
                        leftToRight = scanner.nextDouble();
                        downToUp = scanner.nextDouble();
                        backToForward= scanner.nextDouble();
                        selectSpacecraft.speedUp(new double[]{leftToRight, downToUp, backToForward});
                        break;
-                   case 5:
+                   case 4:
                        createOtherSpacecraft = true;
                        break;
 
@@ -122,7 +118,7 @@ public class Main {
                        System.out.println("invalid election, try again");
 
                }
-               if (selectBehavior != 5) {
+               if (selectBehavior <5||selectBehavior>0) {
                    System.out.print("nombre: " + selectSpacecraft.getName() + "\n" +
                            "power: " + selectSpacecraft.getPower() + "\n" +
                            "type of propulsion system" + selectSpacecraft.getTypeOfPropulsionSystem() + "\n" +

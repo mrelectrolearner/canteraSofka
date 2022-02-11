@@ -48,19 +48,6 @@ public class Fuel {
         }
     }
 
-    /**
-     * Update the fuel stateOn when it is refuel.
-     * @param volumeToRefuel The fuel volume that is supply.
-     * @param tankCapacity The tank capacity of the spacecraft.
-     */
-    public void refuel(double volumeToRefuel, double tankCapacity){
-        double totalRefuel=this.volume +volumeToRefuel;
-        if(totalRefuel<tankCapacity){
-            this.volume =this.volume +volumeToRefuel;
-        }else{
-            System.out.println("not allowed, the tank is full");
-        }
-    }
 
     /**
      * Get the fuel name.

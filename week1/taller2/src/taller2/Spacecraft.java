@@ -98,7 +98,7 @@ public abstract class Spacecraft {
      * @param power the power use for the spacecraft.
      */
     private void fuelConsumed(double power){
-        double fuelConsumed=this.powerToFuel(power);
+        double fuelConsumed=Math.abs(this.powerToFuel(power));
         this.fuel.setVolume(this.fuel.getVolume()-fuelConsumed);
     }
 

@@ -28,23 +28,6 @@ public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
         this.loadCarryingCapacity = loadCarryingCapacity;
     }
 
-    /**
-     * Launch the shuttle ship until it is out of earth (100000000).
-     */
-    public void launch(){
-        double outOfEarthPosition=100000000;
-        double[] positionIncrement={0,0.1,0};
-        double[] position=this.getPosition();
-        double[] positionToSet;
-        while(this.getPosition()[1]<outOfEarthPosition){
-
-            for (int index = 0; index < this.getPosition().length; index++) {
-                positionToSet=new double[]{position[index] + positionIncrement[index]};
-                this.setPosition(positionToSet);
-            }
-            position=this.getPosition();
-        }
-    }
 
 
     /**
