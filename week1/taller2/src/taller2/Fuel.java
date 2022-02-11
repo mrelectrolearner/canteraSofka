@@ -1,3 +1,4 @@
+package taller2;
 
 /**
  *Represent a spacecraft's fuel
