@@ -73,7 +73,7 @@ public class Main {
                    break;
 
                case 3:
-                   Fuel N2H4 = new Fuel("H+O", 100, 1, 1000000);
+                   Fuel N2H4 = new Fuel("N2H4 ", 100, 1, 1000000);
                    selectSpacecraft = new UnmannedSpacecraft(
                            65.67,
                            "Mariner X",
