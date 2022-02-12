@@ -7,7 +7,7 @@ package taller2;
  */
 
 public class ShuttleShip extends Spacecraft implements IpropulsionSystem{
-    private double loadCarryingCapacity;
+    private final double loadCarryingCapacity;
 
     /**
      * Instance a shuttleShip turn off and with a position in {0,0,0} and speed {0,0,0}.

@@ -37,7 +37,7 @@ public abstract class Spacecraft {
     /**
      * Represent the spacecraft's mass.
      */
-    private double mass;
+    private final double mass;
 
     /**
      * Instance a spacecraft turn off and with a position in {0,0,0} and speed {0,0,0}.
@@ -154,14 +154,6 @@ public abstract class Spacecraft {
         return mass;
     }
 
-    /**
-     * Set the mass.
-     * @param mass spacecraft's mass to set.
-     */
-
-    public void setMass(double mass) {
-        this.mass = mass;
-    }
 
     /**
      * Get the spacecraft's speed vector.
