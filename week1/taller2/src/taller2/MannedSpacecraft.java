@@ -15,7 +15,12 @@ public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
      * @param crewCapacity maximum number of people in the crew.
      */
     public MannedSpacecraft(
-            double power, String name, String typeOfPropulsionSystem, Fuel fuel, int crewCapacity,double mass)
+            double power,
+            String name,
+            String typeOfPropulsionSystem,
+            Fuel fuel,
+            int crewCapacity,
+            double mass)
     {
         super(power, name, typeOfPropulsionSystem, fuel, mass);
         this.crewCapacity = crewCapacity;

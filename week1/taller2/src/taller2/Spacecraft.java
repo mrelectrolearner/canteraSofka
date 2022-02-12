@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Represent the spacecraft and its basic actions using the launch site
- * as inertial reference system and mks unit for measurement.
+ * as inertial reference system.
  *
  * @author  Luis Felipe Rivas
  */
