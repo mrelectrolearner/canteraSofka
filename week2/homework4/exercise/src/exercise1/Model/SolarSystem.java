@@ -1,9 +1,13 @@
 package exercise1.Model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Represent a Solar system.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas.
+ * @since 1.0.0 2022-02-15.
  */
 public class SolarSystem {
     /**
@@ -29,7 +33,8 @@ public class SolarSystem {
      */
 
     public void setSun(Sun sun){
-        this.sun=sun;
+
+        this.sun=Objects.requireNonNull(sun);
     }
 
     /**
@@ -38,13 +43,16 @@ public class SolarSystem {
      */
 
     public Sun getSun() {
+
         return sun;
     }
     public void addPlanet(Planet planet){
-        this.planets.add(planet);
+
+        this.planets.add(Objects.requireNonNull(planet));
     }
 
     public ArrayList<Planet> getPlanets() {
+
         return planets;
     }
     /**

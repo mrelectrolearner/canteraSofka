@@ -1,8 +1,12 @@
 package exercise1.Model;
 
+import java.util.Objects;
+
 /**
  * Represent a plant and calculate its gravitational attraction with other celestial bodies.
- * @author Luis Felipe Rivas Mina.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas.
+ * @since 1.0.0 2022-02-15.
  */
 public class Planet extends CelestialBody {
     /**
@@ -28,9 +32,14 @@ public class Planet extends CelestialBody {
      */
     public Planet(double mass, double density, String name, double diameter,double distanceToSun) {
         super(mass, density, name, diameter);
-        this.distanceToSun = distanceToSun;
+        this.distanceToSun = Objects.requireNonNull(distanceToSun);
         this.id = counter;
         counter+=1;
+        boolean negativeDistanceToSun=(this.getDistanceToSun()<0);
+        if(negativeDistanceToSun){
+            throw new IllegalArgumentException("Negative distance to the sun is not allowed.");
+        }
+
     }
 
     /**
@@ -40,10 +49,20 @@ public class Planet extends CelestialBody {
      */
     @Override
     public double gravitationalAttraction(Object planetObject) {
-        Planet planet=(Planet) planetObject;
-        double distance=Math.abs(this.distanceToSun-planet.getDistanceToSun());
-        return this.getMass()*planet.getMass()*
-                this.getGravityConstant()/Math.pow(distance,2);
+        Planet planet=Objects.requireNonNull((Planet) planetObject);
+        try{
+            double distance=Math.abs(this.distanceToSun-planet.getDistanceToSun());
+            return this.getMass()*planet.getMass()*
+                    this.getGravityConstant()/Math.pow(distance,2);
+
+        }catch (ArithmeticException exc){
+            System.out.println("Arithmetic error in the gravity attraction calculation: \n"+exc);
+            return 0;
+        }catch (Exception exc){
+            System.out.println("Error in the gravity attraction calculation: \n"+exc);
+            return 0;
+        }
+
 
     }
 
