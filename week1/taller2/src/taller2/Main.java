@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Is the interface for the user and its operations.
+ * @author Luis Felipe Rivas
  */
 public class Main {
    public static void main(String[] args) {
