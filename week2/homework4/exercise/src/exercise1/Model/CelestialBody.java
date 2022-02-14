@@ -1,8 +1,12 @@
 package exercise1.Model;
 
+import java.util.Objects;
+
 /**
  * Represent a celestial body and some og its basic gravitational calculation.
- * @author Luis Felipe Rivas Mina.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas.
+ * @since 1.0.0 2022-02-15.
  */
 
 public abstract class CelestialBody {
@@ -36,10 +40,11 @@ public abstract class CelestialBody {
      */
 
     public CelestialBody(double mass, double density, String name, double diameter) {
-        this.mass = mass;
-        this.density = density;
+        this.mass = Objects.requireNonNull(mass);
+        this.density =Objects.requireNonNull(density);
         this.name = name;
-        this.diameter = diameter;
+        this.diameter =Objects.requireNonNull(diameter);
+
 
     }
 
@@ -57,7 +62,18 @@ public abstract class CelestialBody {
      */
 
     public double gravityForce(){
-        return this.getMass()*this.getGravityConstant()/Math.pow(this.getDiameter(),2);
+        try{
+            double gForce=this.getMass()*this.getGravityConstant()/Math.pow(this.getDiameter(),2);
+            return gForce;
+
+        }catch (ArithmeticException exc){
+            System.out.println("Arithmetic error in the gravity force calculation: \n" +exc);
+            return 0;
+        }catch (Exception exc){
+            System.out.println("Error in the gravity force calculation: \n"+exc);
+            return 0;
+        }
+
     }
 
     /**
