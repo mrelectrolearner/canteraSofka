@@ -1,4 +1,8 @@
 package taller2;
+/**
+* Represent the manned spacecraft and its basics operations.
+* @author Luis Felipe Rivas.
+*/
 
 public class MannedSpacecraft extends Spacecraft implements IpropulsionSystem {
     /**
