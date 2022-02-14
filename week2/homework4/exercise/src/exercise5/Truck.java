@@ -1,5 +1,6 @@
 package exercise5;
 
 public class Truck {
-    height;
+    private double height;
+    private double loadCapacity;
 }
