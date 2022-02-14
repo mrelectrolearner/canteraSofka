@@ -1,5 +1,7 @@
 package taller2;
-
+/**
+*Represent the unmanned spacecraft and its basic operations.
+*/
 public class UnmannedSpacecraft extends Spacecraft implements IpropulsionSystem {
 
 
