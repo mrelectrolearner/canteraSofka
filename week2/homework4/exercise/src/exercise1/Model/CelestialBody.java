@@ -57,7 +57,7 @@ public abstract class CelestialBody {
      */
 
     public double gravityForce(){
-        return this.mass*this.gravityConstant/Math.pow(this.diameter,2);
+        return this.getMass()*this.getGravityConstant()/Math.pow(this.getDiameter(),2);
     }
 
     /**
