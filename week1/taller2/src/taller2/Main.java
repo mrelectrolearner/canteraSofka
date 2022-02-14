@@ -9,33 +9,33 @@ import java.util.Scanner;
  */
 public class Main {
    public static void main(String[] args) {
-       /**
+       /*
         * Represent the spacecraft created by the user.
         */
        Spacecraft selectSpacecraft = null;
-       /**
+       /*
         * Represent if the user want to create other spacecraft.
         */
        boolean createOtherSpacecraft;
-       /**
+       /*
         * Represent the left to right movement of the spacecraft.
         */
        double leftToRight;
-       /**
+       /*
         * Represent the down to up movement of the spacecraft.
         */
        double downToUp;
-       /**
+       /*
         * Represent the back to forward movement of the spacecraft.
         */
        double backToForward;
 
-       /**
+       /*
         * Represent the keyboard scan.
         */
        Scanner scanner =new Scanner(System.in);
        while(true) {
-           /**
+           /*
             * The user select the spacecraft that want to create.
             */
            System.out.println("Welcome, please select what spacecraft you want to create\n");
@@ -101,7 +101,7 @@ public class Main {
                    System.out.println("invalid election, try again");
            }
 
-           /**
+           /*
             * Show to the user, the spacecraft created.
             */
            System.out.print("name: " + selectSpacecraft.getName() + "\n" +
@@ -112,7 +112,7 @@ public class Main {
                    "speed: " + Arrays.toString(selectSpacecraft.getSpeed()) + "\n" +
                    "fuel volume:" + selectSpacecraft.getFuel().getVolume() + "\n");
 
-           /**
+           /*
             * Allow the user select the behavior  of the spacecraft.
             */
            createOtherSpacecraft = false;
