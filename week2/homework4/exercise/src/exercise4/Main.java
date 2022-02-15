@@ -67,15 +67,7 @@ public class Main {
                         "it was not possible create the vehicle.\n"+exc);
             }catch (Exception exc){
                 System.out.println("Error, it was not possible create the vehicle.\n"+exc);
-
             }
-
-
         }
-
-
-
-
-
     }
 }
