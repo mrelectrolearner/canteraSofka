@@ -4,7 +4,14 @@ import exercise4.Vehicle;
 
 import java.util.Calendar;
 
-public class Bike extends Vehicle {
+/**
+ *Represent a bike and its basics behaviors.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ * @since 1.0.0 2022-02-15.
+ */
+
+public class Bike  {
     private boolean thereArePedal;
 
 }
