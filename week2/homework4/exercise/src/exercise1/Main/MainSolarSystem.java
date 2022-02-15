@@ -11,11 +11,15 @@ import java.util.Scanner;
 /**
  * Represent the execution of the project.Create an interface for the users to operate on the solar system.
  * @version 1.0.0 2022-02-15.
- * @author Luis Felipe Rivas.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com
  * @since 1.0.0 2022-02-15.
  */
 
 public class MainSolarSystem {
+    /**
+     * Execute the program and create the interface for the user interact with the solar system.
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         /*
@@ -121,10 +125,10 @@ public class MainSolarSystem {
                 System.out.println("Press any button and enter to continue.");
                 scanner.next();
             }catch (IllegalArgumentException exc){
-                System.out.println("Error, an illegal argument was introduced"+exc);
+                System.out.println("Error, an illegal argument was introduced: \n"+exc.getMessage());
 
             }catch (Exception exc){
-                System.out.println(exc);
+                System.out.println(exc.getMessage());
             }
 
         }

@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * Represent a Solar system.
  * @version 1.0.0 2022-02-15.
- * @author Luis Felipe Rivas.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
  * @since 1.0.0 2022-02-15.
  */
 public class SolarSystem {

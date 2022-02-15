@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Represent a celestial body and some og its basic gravitational calculation.
  * @version 1.0.0 2022-02-15.
- * @author Luis Felipe Rivas.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com
  * @since 1.0.0 2022-02-15.
  */
 

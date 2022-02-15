@@ -6,6 +6,9 @@ import exercise1.Model.Sun;
 
 /**
  * Represent a controller that create the solar system with the sun and some planets.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+ * @since 1.0.0 2022-02-15.
  */
 
 public class Controller {

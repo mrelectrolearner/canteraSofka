@@ -3,7 +3,7 @@ package exercise1.Model;
 /**
  * Represent the Sun of a solar system and its gravitational attraction with other celestial bodies.
  * @version 1.0.0 2022-02-15.
- * @author Luis Felipe Rivas.
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
  * @since 1.0.0 2022-02-15.
  */
 
