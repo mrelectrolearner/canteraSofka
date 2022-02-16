@@ -27,7 +27,13 @@ public class Boat extends Vehicle {
      * @param travelMeans      the vehicle's travel means.
      * @param isAnchored  Represent if the boat is anchored.
      */
-    public Boat(int passengersNumber, boolean thereAreCrew, int wheelsNumber, Calendar registerDate, String travelMeans, boolean isAnchored) {
+    public Boat(int passengersNumber,
+                boolean thereAreCrew,
+                int wheelsNumber,
+                Calendar registerDate,
+                String travelMeans,
+                boolean isAnchored)
+    {
         super(passengersNumber, thereAreCrew, wheelsNumber, registerDate, travelMeans);
         this.setAnchored(isAnchored);
     }

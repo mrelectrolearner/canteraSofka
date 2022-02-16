@@ -32,7 +32,14 @@ public class Truck extends Vehicle {
      * @param height  represent the truck's height.
      * @param loadCapacity represent the truck's load capacity.
      */
-    public Truck(int passengersNumber, boolean thereAreCrew, int wheelsNumber, Calendar registerDate, String travelMeans, double height, double loadCapacity) {
+    public Truck(int passengersNumber,
+                 boolean thereAreCrew,
+                 int wheelsNumber,
+                 Calendar registerDate,
+                 String travelMeans,
+                 double height,
+                 double loadCapacity)
+    {
         super(passengersNumber, thereAreCrew, wheelsNumber, registerDate, travelMeans);
         this.height = height;
         this.loadCapacity = loadCapacity;

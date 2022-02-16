@@ -28,7 +28,13 @@ public class Bike extends Vehicle {
      * @param travelMeans      the vehicle's travel means.
      * @param pedalType  the Bike's pedal type.
      */
-    public Bike(int passengersNumber, boolean thereAreCrew, int wheelsNumber, Calendar registerDate, String travelMeans, String pedalType) {
+    public Bike(int passengersNumber,
+                boolean thereAreCrew,
+                int wheelsNumber,
+                Calendar registerDate,
+                String travelMeans,
+                String pedalType)
+    {
         super(passengersNumber, thereAreCrew, wheelsNumber, registerDate, travelMeans);
         this.pedalType = pedalType;
     }

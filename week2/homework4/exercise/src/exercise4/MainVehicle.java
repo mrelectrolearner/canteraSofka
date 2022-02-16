@@ -4,6 +4,7 @@ package exercise4;
 import exercise4.Controller.VehicleType;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -31,6 +32,7 @@ public class MainVehicle {
             System.out.println("Vehicles list:" +"\n");
             System.out.println(vehiclesListElement +"\n");
         }
+        
 
     }
 }
