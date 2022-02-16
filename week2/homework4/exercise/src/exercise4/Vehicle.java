@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Represent a vehicle and its basic operations.
  * @version 1.0.0 2022-02-15.
- * @author Luis Felipe Rivas.
+ * @author Luis Felipe Rivas- luisfelorivas@gmail.com..
  * @since 1.0.0 2022-02-15.
  */
 public class Vehicle {
@@ -21,6 +21,8 @@ public class Vehicle {
 
     /**
      * Instance a vehicle.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param passengersNumber the passengers number
      * @param thereAreCrew represent is there are a crew.
      * @param wheelsNumber the wheels number.
@@ -38,12 +40,14 @@ public class Vehicle {
         this.wheelsNumber = wheelsNumber;
         this.registerDate = Objects.requireNonNull(registerDate);
         this.travelMeans = Objects.requireNonNull(travelMeans);
-        this.position = new double[3];
-        this.velocity = new double[3];
+        this.setPosition(new double[3]);
+        this.setVelocity (new double[3]);
     }
 
     /**
      * add two arrays of doubles of tree dimensions.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param array1 the first array to add.
      * @param array2 the second array to add.
      * @return the addition of the first and second array.
@@ -60,6 +64,8 @@ public class Vehicle {
 
     /**
      *  Change the position of a vehicle a distance.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param distance the distance to move the vehicle.
      */
 
@@ -75,6 +81,8 @@ public class Vehicle {
 
     /**
      * Change the velocity of the vehicle.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param acceleration the amount that change the velocity.
      */
     public void speedup(double[] acceleration){
@@ -88,6 +96,8 @@ public class Vehicle {
 
     /**
      * Get the passengers number.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return the passengers number.
      */
     public int getPassengersNumber() {
@@ -96,6 +106,8 @@ public class Vehicle {
 
     /**
      * Get if the vehicle  are crewed.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return if vehicle are crewed.
      */
 
@@ -105,6 +117,8 @@ public class Vehicle {
 
     /**
      * Get the wheels number.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return the wheels number.
      */
 
@@ -114,6 +128,8 @@ public class Vehicle {
 
     /**
      * Get the vehicle's register Date.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return vehicle's register Date.
      */
 
@@ -123,6 +139,8 @@ public class Vehicle {
 
     /**
      * Get the vehicle's travel means.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return vehicle's travel means.
      */
 
@@ -132,6 +150,8 @@ public class Vehicle {
 
     /**
      * Get the vehicle's position.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return vehicle's position.
      */
 
@@ -141,6 +161,8 @@ public class Vehicle {
 
     /**
      * Set the vehicle's position.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param position the vehicle's position.
      */
 
@@ -150,6 +172,8 @@ public class Vehicle {
 
     /**
      * Get the velocity.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return the velocity.
      */
 
@@ -159,6 +183,8 @@ public class Vehicle {
 
     /**
      * Set the vehicle's velocity.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param velocity the vehicle's velocity.
      */
 
@@ -168,20 +194,20 @@ public class Vehicle {
 
     /**
      * Catch in a string the information of the vehicle.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return the vehicle's information.
      */
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "passengersNumber=" + passengersNumber +
-                ", thereAreCrew=" + thereAreCrew +
-                ", wheelsNumber=" + wheelsNumber +
-                ", registerDate=" +   registerDate.get(Calendar.DAY_OF_MONTH)+"/"
-                + registerDate.get(Calendar.MONTH)+"/"+ registerDate.get(Calendar.YEAR)+
-                ", travelMeans='" + travelMeans + '\'' +
-                ", position=" + Arrays.toString(position) +
-                ", velocity=" + Arrays.toString(velocity) +
-                '}';
+        return "passengersNumber=" + passengersNumber
+                +", thereAreCrew=" + thereAreCrew
+                +", wheelsNumber=" + wheelsNumber
+                +", registerDate=" +   registerDate.get(Calendar.DAY_OF_MONTH)+"/"
+                + registerDate.get(Calendar.MONTH)+"/"+ registerDate.get(Calendar.YEAR)
+                +", travelMeans='" + travelMeans + '\''
+                +", position=" + Arrays.toString(position)
+                +", velocity=" + Arrays.toString(velocity);
     }
 }
