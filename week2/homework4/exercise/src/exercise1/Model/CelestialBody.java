@@ -11,6 +11,10 @@ import java.util.Objects;
 
 public abstract class CelestialBody {
     /**
+     * Represent the gravitational Constant.
+     */
+    private final static double gravityConstant=8;
+    /**
      * Represent the mass of the celestial body.
      */
     private final double mass;
@@ -26,13 +30,12 @@ public abstract class CelestialBody {
      * Represent the diameter of the celestial body.
      */
     private final double diameter;
-    /**
-     * Represent the gravitational Constant.
-     */
-    private final double gravityConstant=8;
+
 
     /**
      * Instance a celestial body.
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param mass the mass of the celestial body.
      * @param density  the density of the celestial body.
      * @param name  the name of the celestial body.
@@ -50,6 +53,8 @@ public abstract class CelestialBody {
 
     /**
      * Calculate the gravitational attraction between a celestial body and a planet using the Newton law.
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @param planetObject the planet use to calculate the gravitational attraction.
      * @return the gravitational attraction between a celestial body and a planet.
      */
@@ -58,6 +63,8 @@ public abstract class CelestialBody {
 
     /**
      * Calculate the gravitational force of the celestial body.
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return gravitational force of the celestial body.
      */
 

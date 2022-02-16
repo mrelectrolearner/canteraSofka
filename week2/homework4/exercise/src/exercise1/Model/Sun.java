@@ -11,6 +11,8 @@ public class Sun extends CelestialBody{
 
     /**
      * Instance a sun.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      *
      * @param mass     the mass of the celestial body.
      * @param density  the density of the celestial body.
@@ -26,7 +28,8 @@ public class Sun extends CelestialBody{
 
     /**
      * Calculate the gravitational attraction between the sun and a planet using the Newton law.
-     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @param planetObject the planet use to calculate the gravitational attraction.
      * @return the gravitational attraction between a celestial body and a planet.
      */
@@ -47,6 +50,8 @@ public class Sun extends CelestialBody{
 
     /**
      * Create a String of the sun attributes.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @return String of the sun attributes.
      */
     @Override

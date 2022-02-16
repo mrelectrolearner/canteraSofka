@@ -14,6 +14,8 @@ import exercise1.Model.Sun;
 public class Controller {
     /**
      * Create a solar system adding tree planets and a Sun.
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      * @return  a solar system.
      */
     public static SolarSystem createSolarSystem(){

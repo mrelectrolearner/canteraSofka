@@ -24,6 +24,8 @@ public class Planet extends CelestialBody {
 
     /**
      * Instance a celestial body.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      *  @param mass     the mass of the celestial body.
      * @param density  the density of the celestial body.
      * @param name     the name of the celestial body.
@@ -44,6 +46,8 @@ public class Planet extends CelestialBody {
 
     /**
      * Calculate the gravitational attraction between a celestial body and a planet using the Newton law.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @param planetObject the planet use to calculate the gravitational attraction.
      * @return the gravitational attraction between a celestial body and a planet.
      */
@@ -62,12 +66,12 @@ public class Planet extends CelestialBody {
             System.out.println("Error in the gravity attraction calculation: \n"+exc);
             return 0;
         }
-
-
     }
 
     /**
      * Get the planet's distance to the sun.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @return the planet's distance to the sun.
      */
     public double getDistanceToSun() {
@@ -76,6 +80,8 @@ public class Planet extends CelestialBody {
 
     /**
      * Create a String of the celestial body's attributes.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @return String of the planet attributes.
      */
     @Override

@@ -21,6 +21,8 @@ public class SolarSystem {
 
     /**
      * Instance an empty the solar system.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      */
     public SolarSystem() {
         this.planets =new ArrayList<>();
@@ -29,6 +31,8 @@ public class SolarSystem {
 
     /**
      * Set the Sun of the solar system.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @param sun the sun of the solar system.
      */
 
@@ -39,6 +43,8 @@ public class SolarSystem {
 
     /**
      * Get the sun of the solar system.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @return the su of the solar system.
      */
 
@@ -57,13 +63,15 @@ public class SolarSystem {
     }
     /**
      * Create a String of the solar system attributes.
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      * @return String of the solar system attributes.
      */
     @Override
     public String toString() {
-        return "SolarSystem{" +
-                "" + planets +
-                ", sun=[" + sun +"]"+
-                '}';
+        return "SolarSystem{"
+                +" " + planets
+                +", sun=[" + sun +"]"
+                +'}';
     }
 }
