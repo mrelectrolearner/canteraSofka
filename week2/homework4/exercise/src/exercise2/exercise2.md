@@ -7,5 +7,5 @@ The only entry point of a java program is a main function
 with a  string array as its parameter.It's possible
 to have multiples functions main that overloading
 the main method, but it is only possible to have 
-one entre point. So, it's allowed to have only one main with one
+one entre point. So, it should be only one main with one
  string array as its parameter.
