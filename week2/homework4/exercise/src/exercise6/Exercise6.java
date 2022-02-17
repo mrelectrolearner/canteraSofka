@@ -1,5 +1,6 @@
 package exercise6;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -23,15 +24,20 @@ public class Exercise6 {
         while(!isEqualToTheLastNumber) {
             try {
                 System.out.println("\nPlease, enter a number: ");
-                Double enterNumber=scanner.nextDouble();
+                Double enterNumber= (Double) scanner.nextDouble();
+                enterNumber.
                 if(numberList.size()>0){
                     Double lasElement= (Double) numberList.lastElement();
                     isEqualToTheLastNumber =enterNumber.equals(lasElement);
                 }
                 numberList.add(enterNumber);
                 System.out.println("the number " + enterNumber + " was added to the list\n");
-            }catch (Exception exc){
-                System.out.println("Error! "+ exc+" try again\n");
+            }catch (ExceptionInInitializerError exc){
+                System.out.println("Error type! "+ exc+" try again\n");
+            }catch (ClassCastException exc){
+                System.out.println("Error! cast "+ exc+" try again\n");
+            }catch (InputMismatchException exc){
+                System.out.println("Error! miss "+ exc+" try again\n");
 
             }
 
