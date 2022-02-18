@@ -122,7 +122,7 @@ public class Garage {
                     this.increaseVehiclesNumber();
                     break;
                 case 3:
-                    System.out.println("Enter if the boat is anchored: ");
+                    System.out.println("Enter if are five doors in the car: ");
                     boolean arefiveDoors = scanner.nextBoolean();
 
                     vehicle = new Car(passengersNumber,
@@ -132,10 +132,10 @@ public class Garage {
                     this.increaseVehiclesNumber();
                     break;
                 case 4:
-                    System.out.println("Enter if the truck heihgt: ");
+                    System.out.println("Enter the truck height: ");
                     double height = scanner.nextDouble();
 
-                    System.out.println("Enter if the truck loadCapacity: ");
+                    System.out.println("Enter the truck load capacity: ");
                     double loadCapacity= scanner.nextDouble();
 
                     vehicle = new Truck(passengersNumber,
