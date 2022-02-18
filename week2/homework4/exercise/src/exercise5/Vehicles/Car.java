@@ -6,8 +6,11 @@ import java.util.Calendar;
 
 /**
  * Represent a car and its basics behaviors.
+ *
  * @version 1.0.0 2022-02-15.
+ *
  * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
  * @since 1.0.0 2022-02-15.
  */
 public class Car extends Vehicle {
@@ -18,14 +21,16 @@ public class Car extends Vehicle {
 
     /**
      * Instance a vehicle.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
      *  @param passengersNumber the passengers number
      * @param thereAreCrew     represent is there are a crew.
      * @param wheelsNumber     the wheels number.
      * @param registerDate     the  vehicle's register date.
      * @param travelMeans      the vehicle's travel means.
      * @param arefiveDoors   represent if the car has five doors.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
     public Car(int passengersNumber,
                boolean thereAreCrew,
@@ -40,18 +45,20 @@ public class Car extends Vehicle {
 
     /**
      * Get if there are five doors in the car.
-     * @version 1.0.0 2022-02-15.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @return boolean if there are five doors in the car.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
-    public boolean isArefiveDoors() {
+    public boolean refiveDoors() {
         return arefiveDoors;
     }
     /**
      * Catch in a string the information of the car.
+     * @return the car's information.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the car's information.
      */
     @Override
     public String toString() {

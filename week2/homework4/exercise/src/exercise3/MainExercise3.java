@@ -14,9 +14,14 @@ import java.util.Scanner;
 public class MainExercise3 {
     /**
      * Execute the program: the user select the range of random number, the size of the array and the sort algorithm.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param args
+     *
+     * @exception InputMismatchException It catches when a wrong type of argument is introduced by the user.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

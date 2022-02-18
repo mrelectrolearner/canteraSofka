@@ -27,11 +27,15 @@ public class Sun extends CelestialBody{
     }
 
     /**
+     * Calculate the gravitational attraction between the sun and a planet introduced.
+     * @param planetObject the planet use to calculate the gravitational attraction.
+     * @return the gravitational attraction between a celestial body and a planet.
+     * @exception ArithmeticException It catches when an arithmetic exception condition occur.
+     * @exception Exception It catches exception that were not detected yet occur.
+     *
      * Calculate the gravitational attraction between the sun and a planet using the Newton law.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @param planetObject the planet use to calculate the gravitational attraction.
-     * @return the gravitational attraction between a celestial body and a planet.
      */
     @Override
     public double gravitationalAttraction(Object planetObject) {
@@ -50,9 +54,11 @@ public class Sun extends CelestialBody{
 
     /**
      * Create a String of the sun attributes.
+     *
+     * @return String of the sun attributes.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @return String of the sun attributes.
      */
     @Override
     public String toString() {

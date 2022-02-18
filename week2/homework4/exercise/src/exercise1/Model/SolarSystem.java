@@ -31,9 +31,11 @@ public class SolarSystem {
 
     /**
      * Set the Sun of the solar system.
+     *
+     * @param sun the sun of the solar system.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @param sun the sun of the solar system.
      */
 
     public void setSun(Sun sun){
@@ -43,9 +45,11 @@ public class SolarSystem {
 
     /**
      * Get the sun of the solar system.
+     *
+     * @return the su of the solar system.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @return the su of the solar system.
      */
 
     public Sun getSun() {
@@ -63,9 +67,11 @@ public class SolarSystem {
     }
     /**
      * Create a String of the solar system attributes.
+     *
+     * @return String of the solar system attributes.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @return String of the solar system attributes.
      */
     @Override
     public String toString() {

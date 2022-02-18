@@ -22,8 +22,7 @@ public class Truck extends Vehicle {
 
     /**
      * Instance a vehicle.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      *  @param passengersNumber the passengers number
      * @param thereAreCrew     represent is there are a crew.
      * @param wheelsNumber     the wheels number.
@@ -31,6 +30,10 @@ public class Truck extends Vehicle {
      * @param travelMeans      the vehicle's travel means.
      * @param height  represent the truck's height.
      * @param loadCapacity represent the truck's load capacity.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
     public Truck(int passengersNumber,
                  boolean thereAreCrew,
@@ -47,9 +50,9 @@ public class Truck extends Vehicle {
 
     /**
      * Get the truck's height.
+     * @return the truck's height.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the truck's height.
      */
 
     public double getHeight() {
@@ -58,9 +61,10 @@ public class Truck extends Vehicle {
 
     /**
      * get the truck's load capacity.
+     * @return the truck's load capacity.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the truck's load capacity.
      */
 
     public double getLoadCapacity() {
@@ -68,9 +72,10 @@ public class Truck extends Vehicle {
     }
     /**
      * Catch in a string the information of the truck.
+     *
+     * @return the truck's information.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the truck's information.
      */
     @Override
     public String toString() {

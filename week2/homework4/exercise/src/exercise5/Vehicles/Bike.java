@@ -19,14 +19,16 @@ public class Bike extends Vehicle {
 
     /**
      * Instance a vehicle.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      *  @param passengersNumber the passengers number
      * @param thereAreCrew     represent is there are a crew.
      * @param wheelsNumber     the wheels number.
      * @param registerDate     the  vehicle's register date.
      * @param travelMeans      the vehicle's travel means.
      * @param pedalType  the Bike's pedal type.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
     public Bike(int passengersNumber,
                 boolean thereAreCrew,
@@ -42,9 +44,10 @@ public class Bike extends Vehicle {
 
     /**
      * Get the bike's type of pedal
+     * @return bike's type of pedal.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return bike's type of pedal.
      */
 
     public String getPedalType() {
@@ -53,9 +56,10 @@ public class Bike extends Vehicle {
 
     /**
      * Catch in a string the information of the Bike.
+     * @return the bike's information.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the bike's information.
      */
     @Override
     public String toString() {

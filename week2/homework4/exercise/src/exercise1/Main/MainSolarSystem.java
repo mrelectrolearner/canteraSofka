@@ -6,21 +6,29 @@ import exercise1.Model.SolarSystem;
 import exercise1.Model.Sun;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * Represent the execution of the project.Create an interface for the users to operate on the solar system.
+ *
  * @version 1.0.0 2022-02-15.
+ *
  * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+ *
  * @since 1.0.0 2022-02-15.
  */
 
 public class MainSolarSystem {
     /**
      * Execute the program and create the interface for the user interact with the solar system.
+     * @param args param necessary for the jvm recognize and the main, but not use in this program.
+     * @exception IllegalArgumentException It catches when an illegal argument is introduced by the user.
+     * @exception Exception It catches exception that were not detected by the other two.
+     *
      * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
      * @since 1.0.0 2022-02-15.
-     * @param args
      */
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
@@ -138,6 +146,7 @@ public class MainSolarSystem {
 
             }catch (Exception exc){
                 System.out.println(exc.getMessage());
+                scanner.nextLine();
             }
 
         }

@@ -12,9 +12,12 @@ import java.util.Vector;
 public class Exercise6 {
     /**
      * Ask the user a number and save in a list until it receive to two equals number next to each other.
+     * @param args
+     * @exception InputMismatchException It catches when a wrong type argument is introduced by the user.
+     * @exception Exception It catches any exception that were not detected yet.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param args
      */
     public static void main(String[] args) {
         try {

@@ -24,13 +24,15 @@ public class Planet extends CelestialBody {
 
     /**
      * Instance a celestial body.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
-     * @since 1.0.0 2022-02-15.
-     *  @param mass     the mass of the celestial body.
+     *
+     * @param mass     the mass of the celestial body.
      * @param density  the density of the celestial body.
      * @param name     the name of the celestial body.
      * @param diameter the diameter of the celestial body.
      * @param distanceToSun the distance to the Sun of the planet.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      */
     public Planet(double mass, double density, String name, double diameter,double distanceToSun) {
         super(mass, density, name, diameter);
@@ -46,10 +48,14 @@ public class Planet extends CelestialBody {
 
     /**
      * Calculate the gravitational attraction between a celestial body and a planet using the Newton law.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
-     * @since 1.0.0 2022-02-15.
+     *
      * @param planetObject the planet use to calculate the gravitational attraction.
      * @return the gravitational attraction between a celestial body and a planet.
+     * @exception ArithmeticException It catches when an arithmetic exception condition occur.
+     * @exception Exception It catches exception that were not detected yet occur.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     * @since 1.0.0 2022-02-15.
      */
     @Override
     public double gravitationalAttraction(Object planetObject) {
@@ -70,9 +76,11 @@ public class Planet extends CelestialBody {
 
     /**
      * Get the planet's distance to the sun.
+     *
+     * @return the planet's distance to the sun.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com
      * @since 1.0.0 2022-02-15.
-     * @return the planet's distance to the sun.
      */
     public double getDistanceToSun() {
         return distanceToSun;
@@ -80,9 +88,11 @@ public class Planet extends CelestialBody {
 
     /**
      * Create a String of the celestial body's attributes.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
-     * @since 1.0.0 2022-02-15.
      * @return String of the planet attributes.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+     *
+     * @since 1.0.0 2022-02-15.
      */
     @Override
     public String toString() {

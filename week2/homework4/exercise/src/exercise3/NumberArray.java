@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Represent an array able to be fill with random number and order it using bubble and quick sort algorithm.
+ *
  * @version 1.0.0 2022-02-15.
  * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
  * @since 1.0.0 2022-02-15.
@@ -15,9 +16,11 @@ public class NumberArray {
 
     /**
      * Instance an array of number.
+     *
+     * @param highestNumber the highest number possible to generate randomly.
+     *
      * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param highestNumber the highest number possible to generate randomly.
      */
     public NumberArray(double highestNumber){
         this.highestNumber = highestNumber;
@@ -26,6 +29,7 @@ public class NumberArray {
 
     /**
      * Add a random number to the array as last element.
+     *
      * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
      */
@@ -36,9 +40,11 @@ public class NumberArray {
 
     /**
      * Generate an array of random numbers.
+     *
+     * @param arraySize the array's size.
+     *
      * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param arraySize the array's size.
      */
     public void generateRandomNumbersArray(int arraySize){
         int counter= 0;
@@ -50,6 +56,7 @@ public class NumberArray {
 
     /**
      * Order the array of number using the bubble algorithm.
+     *
      * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
      */
@@ -78,12 +85,14 @@ public class NumberArray {
 
     /**
      * Concatenate an array list, a double and another array list, in thar order.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param list1 first list to be concatenated.
      * @param pivot double to be linked in the list.
      * @param list3 second list to be concatenated.
      * @return the fist list linked with the pivot and the second list.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
     private ArrayList<Double> concatenateArrayList(
             ArrayList<Double> list1, Double pivot, ArrayList<Double> list3)
@@ -98,10 +107,12 @@ public class NumberArray {
 
     /**
      * Order the array of numbers using the quick sort algorithm.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param randomNumbersArray random numbers array to be ordered.
      * @return an ordered numbers array.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
     public ArrayList<Double> quickDivider(ArrayList<Double> randomNumbersArray){
         try {

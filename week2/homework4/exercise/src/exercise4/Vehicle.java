@@ -21,13 +21,15 @@ public class Vehicle {
 
     /**
      * Instance a vehicle.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param passengersNumber the passengers number
      * @param thereAreCrew represent is there are a crew.
      * @param wheelsNumber the wheels number.
      * @param registerDate the  vehicle's register date.
      * @param travelMeans the vehicle's travel means.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
     public Vehicle(int passengersNumber,
             boolean thereAreCrew,
@@ -46,11 +48,13 @@ public class Vehicle {
 
     /**
      * add two arrays of doubles of tree dimensions.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param array1 the first array to add.
      * @param array2 the second array to add.
      * @return the addition of the first and second array.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
 
     private double[] addArrays(double [] array1, double[] array2){
@@ -64,9 +68,13 @@ public class Vehicle {
 
     /**
      *  Change the position of a vehicle a distance.
+     *
+     * @param distance the distance to move the vehicle.
+     *
+     * @exception ArrayIndexOutOfBoundsException It catches if the index of the addition operation is out of bound.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param distance the distance to move the vehicle.
      */
 
     public void move(double[] distance){
@@ -81,24 +89,29 @@ public class Vehicle {
 
     /**
      * Change the velocity of the vehicle.
+     *
+     * @param acceleration the amount that change the velocity.
+     *
+     * @exception ArrayIndexOutOfBoundsException It catches if the index of the addition operation is out of bound.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param acceleration the amount that change the velocity.
      */
     public void speedup(double[] acceleration){
         try {
             this.setVelocity(this.addArrays(this.getVelocity(), acceleration));
         }catch (ArrayIndexOutOfBoundsException exc){
-            System.out.println("Array out of index exception in the velocity addition:\n"+exc);
+            System.out.println("Array out of bound in index of the velocity addition:\n"+exc);
 
         }
     }
 
     /**
      * Get the passengers number.
+     *
+     * @return the passengers number.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the passengers number.
      */
     public int getPassengersNumber() {
         return passengersNumber;
@@ -106,9 +119,10 @@ public class Vehicle {
 
     /**
      * Get if the vehicle  are crewed.
+     *
+     * @return if vehicle are crewed.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return if vehicle are crewed.
      */
 
     public boolean ThereAreCrew() {
@@ -117,9 +131,11 @@ public class Vehicle {
 
     /**
      * Get the wheels number.
+     *
+     * @return the wheels number.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the wheels number.
      */
 
     public int getWheelsNumber() {
@@ -128,9 +144,11 @@ public class Vehicle {
 
     /**
      * Get the vehicle's register Date.
+     *
+     * @return vehicle's register Date.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return vehicle's register Date.
      */
 
     public Calendar getRegisterDate() {
@@ -139,9 +157,11 @@ public class Vehicle {
 
     /**
      * Get the vehicle's travel means.
+     *
+     * @return vehicle's travel means.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return vehicle's travel means.
      */
 
     public String getTravelMeans() {
@@ -150,9 +170,10 @@ public class Vehicle {
 
     /**
      * Get the vehicle's position.
+     *
+     * @return vehicle's position.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return vehicle's position.
      */
 
     public double[] getPosition() {
@@ -161,9 +182,11 @@ public class Vehicle {
 
     /**
      * Set the vehicle's position.
+     *
+     * @param position the vehicle's position.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param position the vehicle's position.
      */
 
     public void setPosition(double[] position) {
@@ -172,9 +195,10 @@ public class Vehicle {
 
     /**
      * Get the velocity.
+     *
+     * @return the velocity.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the velocity.
      */
 
     public double[] getVelocity() {
@@ -183,9 +207,11 @@ public class Vehicle {
 
     /**
      * Set the vehicle's velocity.
+     *
+     * @param velocity the vehicle's velocity.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @param velocity the vehicle's velocity.
      */
 
     public void setVelocity(double[] velocity) {
@@ -194,9 +220,11 @@ public class Vehicle {
 
     /**
      * Catch in a string the information of the vehicle.
+     *
+     * @return the vehicle's information.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the vehicle's information.
      */
 
     @Override

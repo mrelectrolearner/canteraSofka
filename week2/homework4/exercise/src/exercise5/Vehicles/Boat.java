@@ -6,8 +6,11 @@ import java.util.Calendar;
 
 /**
  * Represent a boat and its basics behaviors.
+ *
  * @version 1.0.0 2022-02-15.
+ *
  * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
  * @since 1.0.0 2022-02-15.
  */
 public class Boat extends Vehicle {
@@ -18,14 +21,16 @@ public class Boat extends Vehicle {
 
     /**
      * Instance a vehicle.
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      *  @param passengersNumber the passengers number
      * @param thereAreCrew     represent is there are a crew.
      * @param wheelsNumber     the wheels number.
      * @param registerDate     the  vehicle's register date.
      * @param travelMeans      the vehicle's travel means.
      * @param isAnchored  Represent if the boat is anchored.
+     *
+     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
     public Boat(int passengersNumber,
                 boolean thereAreCrew,
@@ -41,6 +46,7 @@ public class Boat extends Vehicle {
     /**
      * Change the position of a boat a distance.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+     *
      * @since 1.0.0 2022-02-15.
      * @param distance the distance to move the vehicle.
      */
@@ -55,9 +61,10 @@ public class Boat extends Vehicle {
 
     /**
      * Get if the boat is anchored.
+     * @return boolean if the boat is anchored.
+     *
      * @version 1.0.0 2022-02-15.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @return boolean if the boat is anchored.
      */
     public boolean isAnchored() {
         return isAnchored;
@@ -65,9 +72,10 @@ public class Boat extends Vehicle {
 
     /**
      * Set if the boat is anchored.
+     * @param anchored boolean if the boat is anchored.
+     *
      * @version 1.0.0 2022-02-15.
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     * @param anchored boolean if the boat is anchored.
      */
 
     public void setAnchored(boolean anchored) {
@@ -75,9 +83,10 @@ public class Boat extends Vehicle {
     }
     /**
      * Catch in a string the information of the Boat.
+     * @return the Boat's information.
+     *
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-02-15.
-     * @return the Boat's information.
      */
     @Override
     public String toString() {

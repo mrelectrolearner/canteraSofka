@@ -4,8 +4,11 @@ import java.util.Objects;
 
 /**
  * Represent a celestial body and some og its basic gravitational calculation.
+ *
  * @version 1.0.0 2022-02-15.
+ *
  * @author Luis Felipe Rivas -luisfelorivas@gmail.com
+ *
  * @since 1.0.0 2022-02-15.
  */
 
@@ -34,12 +37,15 @@ public abstract class CelestialBody {
 
     /**
      * Instance a celestial body.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param mass the mass of the celestial body.
      * @param density  the density of the celestial body.
      * @param name  the name of the celestial body.
      * @param diameter the diameter of the celestial body.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public CelestialBody(double mass, double density, String name, double diameter) {
@@ -53,19 +59,27 @@ public abstract class CelestialBody {
 
     /**
      * Calculate the gravitational attraction between a celestial body and a planet using the Newton law.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @param planetObject the planet use to calculate the gravitational attraction.
      * @return the gravitational attraction between a celestial body and a planet.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public abstract double gravitationalAttraction(Object planetObject);
 
     /**
      * Calculate the gravitational force of the celestial body.
-     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-     * @since 1.0.0 2022-02-15.
+     *
      * @return gravitational force of the celestial body.
+     * @exception ArithmeticException It catches when an exceptional arithmetic condition occur.
+     * @exception Exception It catches exception that were not detected yet occur.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public double gravityForce(){
@@ -86,6 +100,10 @@ public abstract class CelestialBody {
     /**
      * Get the celestial body's mass.
      * @return  celestial body's mass.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public double getMass() {
@@ -95,6 +113,10 @@ public abstract class CelestialBody {
     /**
      * Get the  celestial body's density.
      * @return  celestial body's density.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public double getDensity() {
@@ -104,6 +126,9 @@ public abstract class CelestialBody {
     /**
      * Get the  celestial body's name.
      * @return  celestial body's name.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
 
     public String getName() {
@@ -113,6 +138,9 @@ public abstract class CelestialBody {
     /**
      * Get the  celestial body's diameter.
      * @return  celestial body's diameter.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
      */
 
     public double getDiameter() {
@@ -122,6 +150,10 @@ public abstract class CelestialBody {
     /**
      * get the gravitational constant.
      * @return the gravitational constant.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
 
     public double getGravityConstant() {
@@ -131,6 +163,10 @@ public abstract class CelestialBody {
     /**
      * Create a String of the celestial body's attributes.
      * @return String of the celestial body's attributes.
+     *
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     *
+     * @since 1.0.0 2022-02-15.
      */
     @Override
     public String toString() {
