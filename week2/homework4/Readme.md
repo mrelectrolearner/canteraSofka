@@ -48,7 +48,8 @@ which implements the "dynamic array" abstraction. Review the class and use it
 (in different files) to make a program that reads numbers from the 
 keyboard until the same number is entered twice in a row. 
 Then the program displays all entered numbers and terminates.
---------------------------------------------------------------------------------------
+
+## annotations
 
 Every exercise is solve in an individual package insede the file src using java.
 
