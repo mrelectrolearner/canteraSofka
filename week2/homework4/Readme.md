@@ -49,7 +49,7 @@ which implements the "dynamic array" abstraction. Review the class and use it
 keyboard until the same number is entered twice in a row. 
 Then the program displays all entered numbers and terminates.
 
-## annotations
+## Annotations
 
 Every exercise is solve in an individual package insede the file src using java.
 
