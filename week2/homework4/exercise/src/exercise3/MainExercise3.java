@@ -5,10 +5,19 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- *
+ *Represent the interface with the user and its basics interaction to build a random numbers array and sort it.
+ * @version 1.0.0 2022-02-15.
+ * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+ * @since 1.0.0 2022-02-15.
  */
 
 public class MainExercise3 {
+    /**
+     * Execute the program: the user select the range of random number, the size of the array and the sort algorithm.
+     * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
+     * @since 1.0.0 2022-02-15.
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("welcome");

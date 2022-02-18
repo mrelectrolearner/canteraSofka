@@ -3,7 +3,7 @@ package exercise3;
 import java.util.ArrayList;
 
 /**
- * Represent an array of number able to be fill with random number and order it.
+ * Represent an array able to be fill with random number and order it using bubble and quick sort algorithm.
  * @version 1.0.0 2022-02-15.
  * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
  * @since 1.0.0 2022-02-15.
