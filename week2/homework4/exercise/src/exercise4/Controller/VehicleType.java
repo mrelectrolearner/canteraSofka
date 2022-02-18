@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
 
 public class VehicleType {
     public static void createVehicle(Scanner scanner,
@@ -118,6 +120,11 @@ public class VehicleType {
         }catch (IllegalArgumentException exc){
             System.out.println("Error in the argument enter, "
                     +"it was not possible create the vehicle.\n"+exc);
+        }catch (InputMismatchException exc){
+            System.out.println("Error in the argument type, "
+                    +"it was not possible create the vehicle.\n"+exc);
+            scanner.nextLine();
+
         }catch (Exception exc){
             System.out.println("Error, it was not possible create the vehicle.\n"+exc);
         }
