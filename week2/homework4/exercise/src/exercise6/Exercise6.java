@@ -17,32 +17,35 @@ public class Exercise6 {
      * @param args
      */
     public static void main(String[] args) {
-        Vector numberList=new Vector<>(0);
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Welcome!!");
-        boolean isEqualToTheLastNumber =false;
-        while(!isEqualToTheLastNumber) {
-            try {
-                System.out.println("\nPlease, enter a number: ");
-                Double enterNumber= (Double) scanner.nextDouble();
-                enterNumber.
-                if(numberList.size()>0){
-                    Double lasElement= (Double) numberList.lastElement();
-                    isEqualToTheLastNumber =enterNumber.equals(lasElement);
+        try {
+            Vector numberList = new Vector<>(0);
+            double enterNumber;
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Welcome!!");
+
+            boolean isEqualToTheLastNumber = false;
+            while (!isEqualToTheLastNumber) {
+                try {
+                    System.out.println("\nPlease, enter a number: ");
+                    enterNumber = (double) scanner.nextDouble();
+                    if (numberList.size() > 0) {
+                        Double lasElement = (Double) numberList.lastElement();
+                        isEqualToTheLastNumber = lasElement.equals(enterNumber);
+                    }
+                    numberList.add(enterNumber);
+                    System.out.println("the number " + enterNumber + " was added to the list\n");
+                } catch (InputMismatchException exc) {
+                    System.out.println("Error  input Type " + exc + " try again\n");
+                    enterNumber= 0;
+                    scanner.nextLine();
                 }
-                numberList.add(enterNumber);
-                System.out.println("the number " + enterNumber + " was added to the list\n");
-            }catch (ExceptionInInitializerError exc){
-                System.out.println("Error type! "+ exc+" try again\n");
-            }catch (ClassCastException exc){
-                System.out.println("Error! cast "+ exc+" try again\n");
-            }catch (InputMismatchException exc){
-                System.out.println("Error! miss "+ exc+" try again\n");
-
             }
+            System.out.println("The numbers entered were: "+numberList);
 
-        }
+        }catch (Exception exc){
+            System.out.println("Error! "+ exc+" try again\n");
+    }
 
-        System.out.println("The numbers entered were: "+numberList);
+
     }
 }
