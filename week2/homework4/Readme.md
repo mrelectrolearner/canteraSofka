@@ -51,6 +51,6 @@ Then the program displays all entered numbers and terminates.
 
 ## Annotations
 
-Every exercise is solve in an individual package insede the file src using java.
+Every exercise is solve in an individual package inside the file src using java.
 
 The excersice 4 and 5 share the files Vehicle.java and Garage.java.
