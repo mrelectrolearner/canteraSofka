@@ -2,17 +2,17 @@
 -- Schema contacts
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS contacts DEFAULT CHARACTER SET utf8 ;
-USE  contacts;
+USE contacts;
 
 -- -----------------------------------------------------
--- Table contacts
+-- Table contacts_personal_info
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS contacts (
+CREATE TABLE IF NOT EXISTS contacts_personal_info (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(15) NULL,
   last_name VARCHAR(15) NULL,
   date_of_birthday DATE NULL,
-  created_at DATE NOT NULL,
+  created_at DATE DEFAULT (CURRENT_DATE),
   updated_at DATE NULL,
   deleted_at DATE NULL,
   PRIMARY KEY (id),
@@ -26,7 +26,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS telephone_numbers (
   id INT NOT NULL AUTO_INCREMENT,
   telephone_numbers VARCHAR(12) NULL,
-  created_at DATE NOT NULL,
+  created_at DATE DEFAULT (CURRENT_DATE),
   updated_at DATE NULL,
   deleted_at DATE NULL,
   PRIMARY KEY (id),
@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS emails (
   id INT NOT NULL AUTO_INCREMENT,
   email VARCHAR(45) NOT NULL,
-  created_at DATE NOT NULL,
+  created_at DATE DEFAULT (CURRENT_DATE),
   updated_at DATE NULL,
   deleted_at DATE NULL,
   PRIMARY KEY (id),
@@ -49,19 +49,22 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table contacts_numbers
+-- Table contacts_personal_info_numbers
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS contacts_numbers (
-  contacts_id INT NOT NULL,
+CREATE TABLE IF NOT EXISTS contacts_personal_info_numbers (
+  contacts_personal_info_id INT NOT NULL,
   telephone_numbers_id INT NOT NULL,
-  PRIMARY KEY (contacts_id, telephone_numbers_id),
-  UNIQUE INDEX fk_contacts_numbers_telephone_numbers1_idx (telephone_numbers_id ASC) VISIBLE,
-  CONSTRAINT fk_contacts_numbers_contacts
-    FOREIGN KEY (contacts_id)
-    REFERENCES contacts (id)
+  created_at DATE DEFAULT (CURRENT_DATE),
+  updated_at DATE NULL,
+  deleted_at DATE NULL,
+  PRIMARY KEY (contacts_personal_info_id, telephone_numbers_id),
+  UNIQUE INDEX fk_contacts_personal_info_numbers_telephone_numbers1_idx (telephone_numbers_id ASC) VISIBLE,
+  CONSTRAINT fk_contacts_personal_info_numbers_contacts_personal_info
+    FOREIGN KEY (contacts_personal_info_id)
+    REFERENCES contacts_personal_info (id)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT fk_contacts_numbers_telephone_numbers1
+  CONSTRAINT fk_contacts_personal_info_numbers_telephone_numbers1
     FOREIGN KEY (telephone_numbers_id)
     REFERENCES telephone_numbers (id)
     ON DELETE CASCADE
@@ -71,19 +74,22 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table contacts_emails
+-- Table contacts_personal_info_emails
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS contacts_emails (
-  contacts_id INT NOT NULL,
+CREATE TABLE IF NOT EXISTS contacts_personal_info_emails (
+  contacts_personal_info_id INT NOT NULL,
   email_id INT NOT NULL,
-  PRIMARY KEY (contacts_id, email_id),
-  UNIQUE INDEX fk_contacts_emails_email1_idx (email_id ASC) VISIBLE,
-  CONSTRAINT fk_contacts_emails_contacts
-    FOREIGN KEY (contacts_id)
-    REFERENCES contacts (id)
+  created_at DATE DEFAULT (CURRENT_DATE),
+  updated_at DATE NULL,
+  deleted_at DATE NULL,
+  PRIMARY KEY (contacts_personal_info_id, email_id),
+  UNIQUE INDEX fk_contacts_personal_info_emails_email1_idx (email_id ASC) VISIBLE,
+  CONSTRAINT fk_contacts_personal_info_emails_contacts_personal_info
+    FOREIGN KEY (contacts_personal_info_id)
+    REFERENCES contacts_personal_info (id)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT fk_contacts_emails_email1
+  CONSTRAINT fk_contacts_personal_info_emails_email1
     FOREIGN KEY (email_id)
     REFERENCES emails (id)
     ON DELETE CASCADE
@@ -93,9 +99,9 @@ ENGINE = InnoDB;
 
 
 -- ------------------------------------------------
--- Insert data in contacts
+-- Insert data in contacts_personal_info
 -- ------------------------------------------------
-INSERT INTO contacts (first_name, last_name, date_of_birthday,created_at)
+INSERT INTO contacts_personal_info (first_name, last_name, date_of_birthday,created_at)
 VALUES ('fifi','lepe','1992-02-15','2002-02-15'),
 ('pupu', 'lepe', '1992-02-11','2012-02-15');
 
@@ -118,28 +124,35 @@ VALUES ('Johnny_Wright1197@zorer.org','2020-05-15'),
 ('Hailey_Woodcock5146@jiman.org', '2020-08-25');
 
 -- ------------------------------------------------
--- Insert data in contacts_emails
+-- Insert data in contacts_personal_info_emails
 -- ------------------------------------------------
-INSERT INTO contacts_emails (contacts_id, email_id)
+INSERT INTO contacts_personal_info_emails (contacts_personal_info_id, email_id)
 VALUES ('1','1'),
 ('1','2'),
 ('2','3');
-INSERT INTO contacts_emails (contacts_id, email_id)
+INSERT INTO contacts_personal_info_emails (contacts_personal_info_id, email_id)
 VALUES ('2','4');
 
 -- ------------------------------------------------
--- Insert data in contacts_numbers 
+-- Insert data in contacts_personal_info_numbers 
 -- ------------------------------------------------
-INSERT INTO contacts_numbers (contacts_id,telephone_numbers_id)
+INSERT INTO contacts_personal_info_numbers (contacts_personal_info_id,telephone_numbers_id)
 VALUES ('1','2'),
 ('1','1'),
 ('2','4');
 
-
+use contacts;
+select * from contacts_personal_info;
 select * from emails;
 select * from telephone_numbers;
-select * from contacts_numbers;
-select * from contacts_emails;
+select * from contacts_personal_info_numbers;
+select * from contacts_personal_info_emails;
 
 
-DROP DATABASE contacts;
+-- DROP DATABASE contacts_personal_info;
+-- DROP DATABASE contacts;
+use contacts;
+select distinct emails.email from emails 
+inner join contacts_personal_info_emails cem on emails.id = cem.email_id 
+inner join contacts_personal_info info on cem.contacts_personal_info_id = info.id
+where info.id=1;
