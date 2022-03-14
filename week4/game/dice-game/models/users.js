@@ -2,15 +2,19 @@ const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 const mongooseSoftDelete=require('mongoose-delete');
 const userSchema=new Schema({
-    name: {
+    id:{
+        type:String,
+        require: [true, 'id is required']
+    },
+    gamers: {
+        type: [String],
+        trim:true,
+        require:[true, "gamer's name is required"]
+    },
+    type:{
         type: String,
         trim:true,
-        require:[true, 'el nombre es requerido']
-    },
-    age: {
-        type: Number,
-        min: [18, 'la edad minima es 18'],
-        max: [90, 'la edad maxima es 90']
+        require:false
     },
     createdAt:{
         type:Date,
@@ -21,8 +25,7 @@ const userSchema=new Schema({
         default:Date.now
     },
     deleteAt:{  
-        type: Date,
-        default:Date.now
+        type: Date
     }
 
 });

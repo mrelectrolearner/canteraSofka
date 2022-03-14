@@ -42,8 +42,7 @@ public class PersonalInformationC {
     @GetMapping(path="/")
     public Map<String, String> index(){
         Map<String,String> respuesta=new HashMap<>();
-        respuesta.put("menssage","hola mundo");
-        respuesta.put("mensaje2","hola pupis");
+        respuesta.put("menssage","Binvenido");
         return respuesta;
 
     }
@@ -58,7 +57,7 @@ public class PersonalInformationC {
      */
 
     @GetMapping(path = "/contacts")
-    public List<PersonalInformation> listado(){
+    public List<PersonalInformation> list(){
         return personalInformationService.list()  ;
 
     }
@@ -85,19 +84,7 @@ public class PersonalInformationC {
 
     }
 
-    /**
-     * Get petition from the direction /contact/email({id} that allow to find contact by the identifier.
-     * @param personalInformation contact's personal information (identifier).
-     * @return a list of contacts found.
-     *
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     *
-     * @since 1.0.0 2022-03-13.
-     */
-    @GetMapping(path = "/contact/email/{id}")
-    public List<Emails> findEmail(PersonalInformation personalInformation){
-        return personalInformationService.findEmailByContact(personalInformation);
-    }
+
 
 
     /**

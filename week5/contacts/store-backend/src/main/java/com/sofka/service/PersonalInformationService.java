@@ -163,35 +163,7 @@ public class PersonalInformationService implements IPersonalInformationService {
         return personalInformationDao.findById(personalInformation.getId());
     }
 
-    /**
-     * Find contact's email.
-     * @param personalInformation  personal information of the contact to be found (identifier).
-     * @return contact's email.
-     *
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     *
-     * @since 1.0.0 2022-03-13.
-     */
-    @Override
-    @Transactional(readOnly = true)
-    public List<Emails> findEmailByContact(PersonalInformation personalInformation) {
-        return emailsDao.findEmailByContact(personalInformation.getId());
-    }
 
-    /**
-     * Find contact's telephone number.
-     *
-     * @param personalInformation personal information of the contact to be found (identifier).
-     * @return contact's telephone number.
-     *
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     *
-     * @since 1.0.0 2022-03-13.
-     */
-    @Override
-    public List<Emails> findNumberByContact(PersonalInformation personalInformation) {
-        return null;
-    }
 
 
 }

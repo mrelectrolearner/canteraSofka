@@ -98,27 +98,7 @@ public interface IPersonalInformationService {
      */
     public Optional<PersonalInformation> findContact(PersonalInformation personalInformation);
 
-    /**
-     * Find contact's email.
-     * @param personalInformation  personal information of the contact to be found (identifier).
-     * @return contact's email.
-     *
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     *
-     * @since 1.0.0 2022-03-13.
-     */
-    public List<Emails> findEmailByContact(PersonalInformation personalInformation);
 
-    /**
-     * Find contact's telephone number.
-     * @param personalInformation  personal information of the contact to be found (identifier).
-     * @return contact's telephone number.
-     *
-     * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
-     *
-     * @since 1.0.0 2022-03-13.
-     */
-    public List<Emails> findNumberByContact(PersonalInformation personalInformation);
 
 
 }

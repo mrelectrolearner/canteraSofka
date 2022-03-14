@@ -9,9 +9,9 @@ mongoose.connect(mongodb,{useNewUrlParser: true,useUnifiedTopology:true})
       .then(()=> console.log('mongoDB connected'))
       .catch(err=>console.error(err));
       
-//routes
+
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/game');
 
 const app = express();
 
@@ -26,9 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/user', require('./routes/create-user'));
+app.use('/game', usersRouter);
+app.use('/createGame', require('./routes/create-game'));
+app.use('/startGame', require('./routes/start-game'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

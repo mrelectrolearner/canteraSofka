@@ -1,5 +1,15 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to luis #{title}
+html
+  head
+  body
+    form(action="/createGame" method="POST")
+      p id:
+        input(type="text" name="id" placeholder="Enter the id ")
+      p type:
+        input(type="text" name="type" placeholder="Enter the id ")
+      p gamer 1:
+        input( type="text" name="gamer1" placeholder="Enter the gamer ")    
+      p gamer 2:
+        input( type="text" name="gamer2" placeholder="Enter the gamer ")  
+      p gamer 3:
+        input( type="text" name="gamer3" placeholder="Enter the gamer ")  
+      input(type="submit")
