@@ -7,6 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Represents the  functions use to build the bingo ballots (ball) in the application service layer.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
+
 import java.util.List;
 @Service
 public class BingoBallotService implements IBingoBallotService{
@@ -74,8 +84,8 @@ public class BingoBallotService implements IBingoBallotService{
      * Checked a bingo ballot.
      *
      *
-     * @param ballotLetter
-     * @param ballotNumber
+     * @param ballotLetter the letter in the ballot (ball).
+     * @param ballotNumber the number in the ballot (ball).
      * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
      * @since 1.0.0 2022-03-13.
      */

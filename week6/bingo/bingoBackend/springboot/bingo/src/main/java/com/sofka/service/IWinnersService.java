@@ -2,6 +2,15 @@ package com.sofka.service;
 
 import com.sofka.domain.Winners;
 
+/**
+ * Represents the functions use to build winners in the application service layer.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
 public interface IWinnersService {
 
     /**

@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * This implemente the interface that represents the functions use to build the application service layer.
+ * This implement the interface that represents the functions use to build the application service layer.
  *
  * @version 1.0.0 2022-03-13.
  *

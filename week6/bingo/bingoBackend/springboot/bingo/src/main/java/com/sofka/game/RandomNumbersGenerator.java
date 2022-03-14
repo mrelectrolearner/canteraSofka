@@ -24,6 +24,7 @@ public class RandomNumbersGenerator {
          * Instance an array of number.
          *
          * @param highestNumber the highest number possible to generate randomly.
+         * @param smallerNumber the highest number possible to generate randomly.
          *
          * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
          * @since 1.0.0 2022-02-15.
@@ -64,10 +65,5 @@ public class RandomNumbersGenerator {
             }
         }
 
-        /**
-         * Order the array of number using the bubble algorithm.
-         *
-         * @author Luis Felipe Rivas-luisfelorivas@gmail.com.
-         * @since 1.0.0 2022-02-15.
-         */
+
 }

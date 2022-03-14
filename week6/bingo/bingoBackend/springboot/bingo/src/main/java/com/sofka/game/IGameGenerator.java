@@ -7,6 +7,13 @@ import java.util.Map;
 
 /**
  * Represent the functions that need to be implemented to generate a game.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ *
  */
 public interface IGameGenerator {
     /**

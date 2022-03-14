@@ -11,6 +11,15 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Represents the  functions use to build the tuples in the application service layer.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
 @Service
 public class TuplesService implements InterfaceTuplesService{
 

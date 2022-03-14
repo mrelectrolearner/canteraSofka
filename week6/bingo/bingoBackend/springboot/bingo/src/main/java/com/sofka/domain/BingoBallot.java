@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 /**
- * Represent the letter b tuples table of the database.
+ * Represent the bingo balls (ballot) table of the database.
  *
  * @version 1.0.0 2022-03-13.
  *

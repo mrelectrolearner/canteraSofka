@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 /**
- * Represent the IGameGenerator Dao (data access object) . This make the connection with the database and implement the crud.
+ * Represent the game Dao (data access object) . This make the connection with the database and implement the crud.
  *
  * @version 1.0.0 2022-03-13.
  *

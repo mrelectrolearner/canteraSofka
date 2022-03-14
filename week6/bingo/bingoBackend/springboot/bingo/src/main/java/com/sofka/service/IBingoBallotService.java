@@ -4,7 +4,15 @@ import com.sofka.domain.BingoBallot;
 
 import java.util.List;
 
-
+/**
+ * Represents the interface with the functions use to build the bingo ballots (ball) in the application service layer.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
 public interface IBingoBallotService {
 
     /**

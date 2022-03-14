@@ -13,6 +13,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * This implement the interface that represents the functions use to build the bingo's game for a player.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
+
 @Service
 public class GameGenerator implements IGameGenerator{
 
@@ -32,8 +42,8 @@ public class GameGenerator implements IGameGenerator{
     /**
      * Create a game every 5 minutes with the gamers in the waiting room.
      *
-     * @param game
-     * @return
+     * @param game game for a player.
+     * @return a player's card for the bingo.
      */
     @Override
     public Map<String, ArrayList<Integer>> createGame(Game game) {
@@ -91,9 +101,9 @@ public class GameGenerator implements IGameGenerator{
 
     /**
      * Generate an int random number.
-     * @param small
-     * @param high
-     * @return
+     * @param small smallest random number to be generated.
+     * @param high highest random number to be generated.
+     * @return a random number between small and high.
      */
 
     public int randomNumber(int small, int high){
@@ -103,7 +113,7 @@ public class GameGenerator implements IGameGenerator{
     /**
      * Generate a random ballot.
      *
-     * @return random ballot for the bingo.
+     * @return random ballot (ball) for the bingo.
      */
     @Override
     public ArrayList<Integer> randomBallot() {

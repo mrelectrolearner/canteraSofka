@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 /**
- * Represent bingo ballot Dao (data access object) . This make the connection with the database and implement the crud.
+ * Represent bingo ball Dao (data access object) . This make the connection with the database and implement the crud.
  *
  * @version 1.0.0 2022-03-13.
  *

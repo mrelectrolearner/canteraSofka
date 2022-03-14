@@ -4,6 +4,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+/**
+ * This implement the interface that represents the functions use to build the bingo's card.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ */
 @Service
 public class CardGenerator implements ICardGenerator{
     public  CardGenerator(){

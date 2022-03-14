@@ -3,7 +3,7 @@ package com.sofka.dao;
 import com.sofka.domain.Winners;
 import org.springframework.data.repository.CrudRepository;
 /**
- * Represent the letter O tuples Dao (data access object) . This make the connection with the database and implement the crud.
+ * Represent the winners Dao (data access object) . This make the connection with the database and implement the crud.
  *
  * @version 1.0.0 2022-03-13.
  *

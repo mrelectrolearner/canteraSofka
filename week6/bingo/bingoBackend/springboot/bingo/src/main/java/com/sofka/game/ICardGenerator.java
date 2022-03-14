@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 /**
  * Represent the functions need to be implemented to create a bingo card for a player.
+ *
+ * @version 1.0.0 2022-03-13.
+ *
+ * @author Luis Felipe Rivas -luisfelorivas@gmail.com.
+ *
+ * @since 1.0.0 2022-03-13.
+ *
  */
 public interface ICardGenerator {
 
